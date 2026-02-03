@@ -67,7 +67,7 @@ const Home = () => {
 
     // get courses data
     const [CatalogPageData, setCatalogPageData] = useState(null);
-    const categoryID = "6506c9dff191d7ffdb4a3fe2" // hard coded
+    const categoryID = "6980d4533b389e25bb56ec78" // hard coded
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -186,6 +186,8 @@ const Home = () => {
                     </div>
 
 
+
+
                     {/* Code block 2 */}
                     <div>
                         <CodeBlocks
@@ -215,13 +217,22 @@ const Home = () => {
                         />
                     </div>
 
+
+
                     {/* course slider */}
+
                     <div className='mx-auto box-content w-full max-w-maxContentTab px- py-12 lg:max-w-maxContent'>
                         <h2 className='text-white mb-6 text-2xl '>
                             Popular Picks for You 🏆
                         </h2>
+                        {/* {console.log(CatalogPageData?.selectedCategory?.courses)} */}
                         <Course_Slider Courses={CatalogPageData?.selectedCategory?.courses} />
                     </div>
+
+
+
+
+
                     <div className=' mx-auto box-content w-full max-w-maxContentTab px- py-12 lg:max-w-maxContent'>
                         <h2 className='text-white mb-6 text-2xl '>
                             Top Enrollments Today 🔥
@@ -232,6 +243,11 @@ const Home = () => {
 
                     <ExploreMore />
                 </div>
+
+
+
+
+
 
                 {/*Section 2  */}
                 <div className='bg-pure-greys-5 text-richblack-700 '>
@@ -263,7 +279,7 @@ const Home = () => {
 
                             <div className='flex flex-col gap-10 w-full lg:w-[40%] items-start'>
                                 <div className='text-[16px]'>
-                                    The modern StudyNotion is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.
+                                    The modern SmartLearn is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.
                                 </div>
                                 <CTAButton active={true} linkto={"/signup"}>
                                     <div>

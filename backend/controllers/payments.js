@@ -118,15 +118,17 @@ exports.verifyPayment = async (req, res) => {
 
 
 // ================ enroll Students to course after payment ================
-// exports.enrollStudents = async (courses, userId, res) => {
-exports.enrollStudents = async (req, res) => {
-
-    const userId=req.user.id;
-    const { coursesId } = req.body;
-    const courses=coursesId;
+// exports.
+const enrollStudents = async (courses, userId, res) => {
     
-    console.log(userId);
-    console.log(coursesId);
+// exports.enrollStudents = async (req, res) => {
+
+    // const userId=req.user.id;
+    // const { coursesId } = req.body;
+    // const courses=coursesId;
+    
+    // console.log(userId);
+    // console.log(coursesId);
 
     if (!courses || !userId) {
         return res.status(400).json({ success: false, message: "Please Provide data for Courses or UserId" });
@@ -173,16 +175,16 @@ exports.enrollStudents = async (req, res) => {
 
             //done by me
 
-            // const emailResponse = await mailSender(
-            //     enrolledStudent.email,
-            //     `Successfully Enrolled into ${enrolledCourse.courseName}`,
-            //     courseEnrollmentEmail(enrolledCourse.courseName, `${enrolledStudent.firstName}`)
-            // )
+            const emailResponse = await mailSender(
+                enrolledStudent.email,
+                `Successfully Enrolled into ${enrolledCourse.courseName}`,
+                courseEnrollmentEmail(enrolledCourse.courseName, `${enrolledStudent.firstName}`)
+            )
 
 
 
 
-            res.status(200).send("sent done");
+            // res.status(200).send("sent done");
 
 
 
